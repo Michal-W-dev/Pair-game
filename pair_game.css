@@ -1,0 +1,298 @@
+/* TESTING */
+
+/* ======== */
+/* options open */
+button[aria-expanded="true"] ~ button {
+	border: 2px solid slateblue;
+	background: rgb(37, 31, 71);
+}
+button[aria-expanded="true"] ~ button:hover {
+	background: darkslateblue;
+	color: white;
+}
+a#tips {
+	max-width: 40px;
+}
+table {
+	border: 3px solid slateblue;
+	border-radius: 6px;
+	/* -moz-border-radius: 6px; */
+	border-collapse: separate;
+}
+tr.heading {
+	background: SlateBlue;
+	color: white;
+}
+tr.win-row {
+	color: darkslateblue;
+}
+td.win.P1,
+td.win.P2 {
+	font-weight: 600;
+}
+td.win {
+	border-bottom: 4px solid slateblue;
+}
+tr:nth-child(even) {
+	background: white;
+}
+span.victory {
+	position: absolute;
+	top: 40%;
+	left: 35%;
+	font-size: 80px;
+	animation: color-change 7s infinite;
+}
+span.draw {
+	position: absolute;
+	top: 40%;
+	left: 5%;
+	font-size: 55px;
+	animation: color-change 7s infinite;
+}
+@keyframes color-change {
+	0% {
+		color: mediumslateblue;
+	}
+	50% {
+		color: DarkSlateBlue;
+	}
+	100% {
+		color: mediumslateblue;
+	}
+}
+.card-body {
+	max-width: 60%;
+	margin: 20px auto;
+	z-index: 11;
+	background: lavender;
+}
+a.btn-outline-secondary {
+	text-transform: none;
+	/* width: 95px; */
+}
+a.btn-outline-secondary:hover {
+	border: 1px solid slateblue;
+}
+button.btn-outline-success {
+	border-radius: 0;
+	border-top-right-radius: 1.1rem;
+	border-bottom-right-radius: 1.1rem;
+}
+.btn-outline-success {
+	border: 1px solid lightgrey;
+	color: grey;
+}
+#input-b1.btn-outline-success:hover,
+#input-b2.btn-outline-success:hover {
+	/* .btn-outline-success:hover { */
+	border-color: BlueViolet;
+	background: #968bdc;
+}
+.card-body:hover button {
+	background: #e1def5;
+	transition: background 0.4s;
+}
+#input-b1.btn-outline-success:active,
+#input-b2.btn-outline-success:active {
+	background: slateblue;
+	border-color: BlueViolet;
+	box-shadow: 0 0 0 0.1rem rgba(106, 90, 205, 0.4);
+}
+.btn:focus,
+input.form-control:focus {
+	border-color: BlueViolet;
+	box-shadow: 0 0 0 0.1rem rgba(106, 90, 205, 0.4);
+}
+input.form-control {
+	border-radius: 0;
+	border-top-left-radius: .3rem;
+	border-bottom-left-radius: .3rem;
+}
+label {
+	line-height: 2.2;
+}
+body {
+	background-color: rgb(20, 20, 20);
+	color: white;
+	margin: 0;
+	font-family: fantasy;
+}
+/* ====== SIZE (height, width) + Card FLIP ========== */
+div.col-2 {
+	perspective: 600px;
+}
+.square {
+	height: 100px;
+	border-radius: 25%;
+	transition: border-radius 0.3s;
+	background: rgb(20, 20, 20);
+	transition: background 0.1s ease-out;
+	/* -webkit-transition: 0.9s; */
+	/* -moz-transition: 0.9s;  */
+	/* -- Card flip -- */
+	/* transform-origin: center right; */
+	transition: transform 0.4s;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
+.drink {
+	position: relative;
+	width: 85%;
+	transition: margin-left 0.1s ease-in;
+	z-index: 10;
+	/* ==== */
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+.is-flipped {
+	/* transform: translateX(-100%) rotateY(-180deg); */
+	transform: rotateY(180deg);
+}
+.container {
+	width: 845px;
+	margin: 0 auto;
+	padding: 0 4%;
+}
+/* ======== I ADDED MEDIA IN THE END =========== */
+
+.steelblue {
+	background: steelblue;
+	border-radius: 15%;
+	/* padding-bottom: 19.6%; */
+	z-index: 20;
+}
+
+.cover {
+	display: none;
+}
+.square:hover .drink {
+	margin-left: -10%;
+	width: 104%;
+}
+.star-anim {
+	transition: 0.1s;
+	background: lightblue;
+	border: 2px solid yellow;
+}
+
+h1 {
+	font-weight: normal;
+	line-height: 1.1;
+	text-align: center;
+	background: steelblue;
+	margin: 0;
+	text-transform: uppercase;
+	padding: 10px 0 10px;
+}
+.score {
+	font-size: 110%;
+}
+#BigRGB {
+	font-size: 150%;
+}
+/* #player2 {margin-left: 20%} */
+
+div span {
+	text-align: center;
+}
+
+#stripe {
+	background-color: white;
+	text-align: center;
+	color: rgb(20, 20, 20);
+	height: 30px;
+	margin-bottom: 2px;
+}
+
+.selected {
+	color: white;
+	background: steelblue;
+}
+
+button {
+	position: relative;
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 0.9px;
+	font-size: inherit;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	/* transition is not supported in every browser */
+	outline: none; /* remove border from chrome */
+	z-index: 12;
+}
+button:hover {
+	color: white;
+	background: steelblue;
+}
+
+#playAgain {
+	margin: 0 3.5%;
+	letter-spacing: 0.2px;
+	color: steelblue;
+}
+#playAgain.dimmedPlayAgain {
+	color: rgb(70, 130, 180, 0.4);
+}
+#playAgain:hover {
+	color: white;
+}
+
+#message {
+	width: 15%;
+	display: inline-block;
+	font-size: 70%;
+}
+.dimmed {
+	color: rgb(255, 255, 255, 0.7);
+}
+.disappeared {
+	color: rgb(255, 255, 255, 0.0);
+}
+.displayP1,
+.displayP2 {
+	text-transform: none;
+}
+/* ====== MEDIA ======= */
+/* - size of squares */
+@media (max-width: 1300px) {
+	.container {
+		max-width: 65%;
+	}
+	.square {
+		height: 90px;
+	}
+}
+@media (max-width: 950px) {
+	.container {
+		max-width: 80%;
+	}
+	.card-body {
+		max-width: 80%;
+	}
+}
+@media (max-width: 800px) {
+	.container {
+		max-width: 100%;
+	}
+	.card-body {
+		max-width: 90%;
+	}
+}
+@media (max-width: 650px) {
+	.square {
+		height: 80px;
+	}
+}
+@media (max-width: 450px) {
+	.square {
+		height: 60px;
+	}
+}
+/* ====== */
