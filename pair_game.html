@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="pair_game.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js">  </script>
+    
+    <title>PAIR GAME</title>
+  </head>
+  <body>
+<h1> PAIR GAME <br> 
+<div class="score"> 
+  <span id="player1"><span id="displayP1" class="displayP1">P1</span>: <span id="displayScoreP1">0</span></span><span id="message"></span>
+  <span id="player2" class="dimmed"> <span id="displayP2" class="displayP2">P2</span>: <span id="displayScoreP2">0</span></span></h1></div>
+<div id="stripe" class="mb-4">
+
+  <button id="options" class="options" type="button" data-toggle="collapse" data-target="#collapseOptions" aria-expanded="false" aria-controls="collapseOptions">
+    Options
+  </button>
+  <div class="collapse" id="collapseOptions">
+<!-- ------------ OPTIONS ---------------- -->
+    <div class="card card-body">
+      <!-- <h2 class="text-left">OPTIONS</h2> -->
+      <div class="row mb-1">
+        <label class="col-sm-3 " for="inputP1">Player 1 name:</label>
+        <input id="inputP1" class="form-control m-0 col-8 col-sm-4" type="text" placeholder="Enter your name">
+        <button class="btn btn-outline-success" type="button" id="input-b1"><i class="fas fa-check"></i></button>
+      </div>
+      
+      <div class="row mb-1">
+        <label class="col-sm-3 mb-0" for="inputP2">Player 2 name:</label>
+        <input id="inputP2" class="form-control m-0 col-8 col-sm-4" type="text" placeholder="Confirm with 'enter' key">
+        <button class="btn btn-outline-success" type="button" id="input-b2"><i class="fas fa-check"></i></button>
+      </div>
+      <h3 class="text-left my-3 ml-2 text-secondary">Last Results</h3>
+      <!-- <p id="resultsP1" class="text-left"><span class="displayP1">P1</span> results : </p>
+      <p id="resultsP2" class="text-left"><span class="displayP2">P2</span> results : </p> -->
+
+      <table class="" style="width:70%">
+        <tr class="heading">
+          <th class="col-2"></th>
+          <th class="col-3"><span class="displayP1">P1</span></th>
+          <th class="col-3"><span class="displayP2">P2</span></th>
+        </tr>
+        <tr class="win-row">
+          <td class="win">WINS</td>
+          <td class="win P1">0</td>
+          <td class="win P2">0</td>
+        </tr>
+      </table> 
+
+
+      <!-- <small class="text-left text-muted mb-0 mt-2">Tips: </small> -->
+      <a id="tips" class="text-left mt-2 mb-0 ml-2" data-toggle="collapse" href="#collapseTips" role="button" aria-expanded="false" aria-controls="collapseTips">
+        Tips
+      </a>
+      <div class="collapse" id="collapseTips">
+        <div class="card card-body" style="max-width:97%">
+          <small  class="text-left text-muted my-0 pl-1"> - clicking on the same card, hide the card, and give your turn to the opponent</small>
+          <small class="text-left text-muted my-0 pl-1"> - once you Draw in the hard mode, the next round's win is for 1 extra point</small> 
+          <small class="text-left text-muted my-0 pl-1"> - once you know that you cannot win you can forfeit the match by clicking 'next round'</small>
+        </div>
+      </div>    
+      <a class="btn btn-outline-secondary btn-sm mt-2" data-toggle="collapse" href="#collapseOptions" role="button" aria-expanded="false" aria-controls="collapseOptions">
+        <i class="fas fa-arrow-left mr-1"></i>  Go Back
+      </a>
+
+    </div>
+  </div>
+<!-- ------------ END OF OPTIONS ---------------- -->
+
+
+
+  <!-- <span>  -->
+    <button id="playAgain" class="dimmedPlayAgain">Next round</button> 
+  <!-- </span> -->
+   <button id="easyB" class='modeB'>Easy</button>
+   <button id="hardB" class="modeB selected">Hard</button>
+ </div>
+
+
+<div class="container">
+<div class="row mb-5 d-flex">
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="1">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="2">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="3">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="4">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="5">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="6">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="7">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="8">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="9">  <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="10"> <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="11"> <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="12"> <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="13"> <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="14"> <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="15"> <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="16"> <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="17"> <img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue easyMode" no="18"> <img class="drink cover" src="" alt=""></div></div>
+<!-- ========== hard mode =========== -->
+  <div class="col-2 px-2 py-2"> <div class="square steelblue hardMode" no="19"><img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue hardMode" no="20"><img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue hardMode" no="21"><img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue hardMode" no="22"><img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue hardMode" no="23"><img class="drink cover" src="" alt=""></div></div>
+  <div class="col-2 px-2 py-2"> <div class="square steelblue hardMode" no="24"><img class="drink cover" src="" alt=""></div></div>
+
+</div>
+</div>
+<span id="victory" class="victory cover"><span id="player-victory"></span> WON !!</span>
+<span id="draw" class="draw cover"> DRAW!!, the next round is for <span id="player-draw"></span> points!</span>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="pair_game.js"></script>
+  </body>
+</html>
