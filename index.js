@@ -152,33 +152,45 @@ function results() {
 		countGames++;
 	}
 }
-// $('#input-b1').click(function() {
-// 	$('#inputP1').keypress(function() {
-// 		$('.displayP1').text($(this).val());
-// $('.displayP1').text($(this).val(''));
-// 	});
-// });
 
 $('#inputP1').keypress(function(event) {
 	if (event.which === 13) {
-		if ($(this).val() === '') {
-			$('.displayP1').text('P1');
-		} else {
-			$('.displayP1').text($(this).val());
-		}
-		$(this).val('');
+		displayP1();
 	}
 });
+
 $('#inputP2').keypress(function(event) {
 	if (event.which === 13) {
-		if ($(this).val() === '') {
-			$('.displayP2').text('P2');
-		} else {
-			$('.displayP2').text($(this).val());
-		}
-		$(this).val('');
+		displayP2();
 	}
 });
+
+$('#input-b1').click(function() {
+	displayP1();
+});
+
+$('#input-b2').click(function() {
+	displayP2();
+});
+
+function displayP1() {
+	if ($('#inputP1').val() === '') {
+		$('.displayP1').text('P1');
+	} else {
+		var name2 = $('#inputP1').val();
+		$('.displayP1').text(name2);
+		$('#inputP1').val('');
+	}
+}
+function displayP2() {
+	if ($('#inputP2').val() === '') {
+		$('.displayP2').text('P2');
+	} else {
+		var name2 = $('#inputP2').val();
+		$('.displayP2').text(name2);
+		$('#inputP2').val('');
+	}
+}
 // function revemoFoundCards() {
 // 	pickedcard.remove();
 // 	clickedcard.remove();
