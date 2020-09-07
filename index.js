@@ -23,16 +23,14 @@ randomArr();
 var score1 = 0;
 var score2 = 0;
 var drawPoint = 0;
-var countGames = 0; // I can save wins in var resultsP1/2 = [], and use countGames as an index
+var countGames = 0; 
 var gameWinP1 = 0;
 var gameWinP2 = 0;
 var countToVictory;
 var turnP1 = true;
 startAnim2();
 compare();
-// === TESTING ====
 
-// ==================
 
 function compare() {
 	var pickedcard, clickedcard, pickedNo1, pickedNo2;
@@ -44,29 +42,24 @@ function compare() {
 			$(this).toggleClass('steelblue');
 			pickedcard = $(this).children().attr('src');
 			pickedNo1 = $(this).attr('no');
-			// console.log('pick ' + pickedcard + 'click1 ', clicks);
 		} else if (clicks === 2) {
 			$(this).toggleClass('is-flipped');
 			$(this).children().toggleClass('cover');
 			$(this).toggleClass('steelblue');
 			clickedcard = $(this).children().attr('src');
 			pickedNo2 = $(this).attr('no');
-			// console.log('clicked ' + clickedcard + 'click2 ', clicks);
-			// console.log('pickedNos ', pickedNo1, pickedNo2);
 			// If PAIR was FOUND !
 			if (clickedcard === pickedcard && pickedNo1 !== pickedNo2) {
 				setTimeout(function() {
 					$('img').addClass('cover');
 					$('.square').addClass('steelblue');
 					$('.square').removeClass('is-flipped');
-					// console.log(clickedcard, pickedcard);
 					$('div[no="' + pickedNo1 + '"]').addClass('cover');
 					$('div[no="' + pickedNo2 + '"]').addClass('cover');
 					clicks = 1;
 				}, 2000);
 				score();
 				countToVictory--;
-				// console.log(countToVictory);
 				if (countToVictory === 0) {
 					setTimeout(function() {
 						$('div[no="' + pickedNo1 + '"]').addClass('cover');
@@ -101,11 +94,7 @@ function compare() {
 				}, 1100);
 			}
 		}
-		// else {
-		// 	// console.log('else ', clicks);
-		// }
 		++clicks;
-		// console.log('click++ ', clicks);
 		console.log(countToVictory);
 	});
 }
@@ -147,8 +136,6 @@ function results() {
 			$('td.P2').text(gameWinP2);
 			drawPoint = 0;
 		}
-		// resultsP1.push(score1);
-		// resultsP2.push(score2);
 		countGames++;
 	}
 }
@@ -191,10 +178,6 @@ function displayP2() {
 		$('#inputP2').val('');
 	}
 }
-// function revemoFoundCards() {
-// 	pickedcard.remove();
-// 	clickedcard.remove();
-// }
 
 function score() {
 	if (turnP1 == true) {
@@ -208,8 +191,6 @@ function score() {
 function whichTurn() {
 	$('#player1').toggleClass('dimmed');
 	$('#player2').toggleClass('dimmed');
-	// if(score1 || score2 !== winScore)
-	// if (!turnP1) {}
 }
 
 $('#hardB').click(function() {
