@@ -229,7 +229,7 @@ function startAnim2() {
 }
 
 function randomArr() {
-	// randomize img_arr (18 / 24)  // randArr = imgArr.sort(() => Math.random() - 0.5);
+	// randomize imgArr (18 / 24)
 	randArr = shuffle(imgArr);
 	// EASY, HARD mode !            // arr - take half item (9 / 12)
 	easyHard();
