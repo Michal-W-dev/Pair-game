@@ -298,5 +298,8 @@ button:hover {
 	button {
 		letter-spacing: 0px;
 	}
+	div.score {
+		font-size: 35px;
+	}
 }
 /* ================= */
