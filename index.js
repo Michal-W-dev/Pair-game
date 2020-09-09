@@ -127,12 +127,10 @@ function results() {
 			drawPoint++;
 		} else if (score1 > score2) {
 			gameWinP1 = gameWinP1 + 1 + drawPoint;
-			// console.log('gameWinP1 ', gameWinP1);
 			$('td.P1').text(gameWinP1);
 			drawPoint = 0;
 		} else if (score1 < score2) {
 			gameWinP2 = gameWinP2 + 1 + drawPoint;
-			// console.log('gameWinP2 ', gameWinP2);
 			$('td.P2').text(gameWinP2);
 			drawPoint = 0;
 		}
@@ -207,6 +205,7 @@ $('#easyB').click(function() {
 });
 // single animation
 function startAnim(i = 0) {
+	var el;
 	if ($('#hardB').hasClass('selected')) {
 		el = [ 1, 0, 1, 7, 13, 19, 20, 21, 22, 23, 24, 18, 12, 6, 5, 4, 3, 2, 1 ];
 	} else if ($('#easyB').hasClass('selected')) {
@@ -238,7 +237,6 @@ function randomArr() {
 	randArr = randArr.concat(randArr);
 	// randomize again (18 / 24)
 	randArr = shuffle(randArr);
-	// console.log('randArr ', randArr);
 	// Assign img src to each square
 	var cards = document.querySelectorAll('img.drink');
 	for (var i = 0; i < cards.length; i++) {
