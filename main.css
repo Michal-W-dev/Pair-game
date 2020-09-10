@@ -79,10 +79,13 @@ span.draw {
 	}
 }
 .card-body {
-	max-width: 60%;
+	max-width: 50%;
 	margin: 20px auto;
 	z-index: 11;
 	background: lavender;
+}
+div.card-body#Tips {
+	max-width: 97%;
 }
 a.btn-outline-secondary {
 	text-transform: none;
@@ -301,6 +304,9 @@ button:hover {
 	}
 	.square {
 		height: 90px;
+	}
+	.card-body {
+		max-width: 60%;
 	}
 }
 @media (max-width: 950px) {
