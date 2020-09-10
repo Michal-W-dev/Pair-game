@@ -15,7 +15,7 @@ table {
 	border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-collapse: separate;
-	width: 70%
+	width: 70%;
 }
 th.col-2 {
 	width: 16.7%;
@@ -45,6 +45,7 @@ span.victory {
 	top: 40%;
 	left: 35%;
 	font-size: 80px;
+	-webkit-animation: color-change 7s infinite;
 	animation: color-change 7s infinite;
 }
 span.draw {
@@ -52,7 +53,19 @@ span.draw {
 	top: 40%;
 	left: 5%;
 	font-size: 55px;
+	-webkit-animation: color-change 7s infinite;
 	animation: color-change 7s infinite;
+}
+@-webkit-keyframes color-change {
+	0% {
+		color: mediumslateblue;
+	}
+	50% {
+		color: DarkSlateBlue;
+	}
+	100% {
+		color: mediumslateblue;
+	}
 }
 @keyframes color-change {
 	0% {
@@ -80,7 +93,9 @@ a.btn-outline-secondary:hover {
 }
 button.btn-outline-success {
 	border-radius: 0;
+	border-top-right-radius: 17.6px;
 	border-top-right-radius: 1.1rem;
+	border-bottom-right-radius: 17.6px;
 	border-bottom-right-radius: 1.1rem;
 }
 .btn-outline-success {
@@ -95,6 +110,7 @@ button.btn-outline-success {
 }
 .card-body:hover button {
 	background: #e1def5;
+	-webkit-transition: background 0.4s;
 	transition: background 0.4s;
 }
 #input-b1.btn-outline-success:active,
@@ -110,7 +126,9 @@ input.form-control:focus {
 }
 input.form-control {
 	border-radius: 0;
+	border-top-left-radius: 4.8px;
 	border-top-left-radius: .3rem;
+	border-bottom-left-radius: 4.8px;
 	border-bottom-left-radius: .3rem;
 }
 label {
@@ -124,18 +142,23 @@ body {
 }
 /* ====== SIZE (height, width) + Card FLIP ========== */
 div.col-2 {
+	-webkit-perspective: 600px;
 	perspective: 600px;
 }
 .square {
 	height: 100px;
 	border-radius: 25%;
+	-webkit-transition: border-radius 0.3s;
 	transition: border-radius 0.3s;
 	background: rgb(20, 20, 20);
 	transition: background 0.1s ease-out;
 	-webkit-transition: background 0.1s ease-out;
 	/* -- Card flip -- */
 	/* transform-origin: center right; */
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: -webkit-transform 0.4s;
 	transition: transform 0.4s;
+	transition: transform 0.4s, -webkit-transform 0.4s;
 	-webkit-transition: 0.4s;
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
@@ -145,9 +168,11 @@ div.col-2 {
 .drink {
 	position: relative;
 	width: 85%;
+	-webkit-transition: margin-left 0.1s ease-in;
 	transition: margin-left 0.1s ease-in;
 	z-index: 10;
 	/* ==== */
+	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 	backface-visibility: hidden;
 	-webkit-transform: rotatey(180deg);
@@ -180,6 +205,7 @@ div.col-2 {
 	width: 104%;
 }
 .star-anim {
+	-webkit-transition: 0.1s;
 	transition: 0.1s;
 	background: lightblue;
 	border: 2px solid yellow;
@@ -312,4 +338,3 @@ button:hover {
 		font-size: 35px;
 	}
 }
-/* ================= */
