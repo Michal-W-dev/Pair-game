@@ -98,6 +98,7 @@ function compare() {
 		console.log(countToVictory);
 	});
 }
+
 playAgain.addEventListener('click', function() {
 	if (!(score1 == 0 && score2 == 0)) {
 		startAnim();
@@ -118,6 +119,7 @@ playAgain.addEventListener('click', function() {
 		randomArr();
 	}
 });
+
 function results() {
 	if (!(score1 == 0 && score2 == 0)) {
 		$('table').append(
@@ -186,6 +188,7 @@ function score() {
 		$('#displayScoreP2').text(score2);
 	}
 }
+
 function whichTurn() {
 	$('#player1').toggleClass('dimmed');
 	$('#player2').toggleClass('dimmed');
@@ -203,6 +206,7 @@ $('#easyB').click(function() {
 	$('.hardMode').addClass('cover');
 	randomArr();
 });
+
 // single animation
 function startAnim(i = 0) {
 	var el;
@@ -243,6 +247,7 @@ function randomArr() {
 		cards[i].setAttribute('src', randArr[i]);
 	}
 }
+
 function easyHard() {
 	if ($('#hardB').hasClass('selected')) {
 		$('.square').removeClass('cover');
@@ -255,16 +260,12 @@ function easyHard() {
 		countToVictory = 9;
 	}
 }
+
+// Shuffle - swapping items - index [i] with random [j]. Looping [i] from end of arr (to index 1).
 function shuffle(arr) {
-	var currentIndex = arr.length;
-	var tempVal;
-	var randomIndex;
-	while (0 !== currentIndex) {
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex -= 1;
-		tempVal = arr[currentIndex];
-		arr[currentIndex] = arr[randomIndex];
-		arr[randomIndex] = tempVal;
+	for (let i = arr.length - 1; i > 0; i--) {
+		let j = Math.floor(Math.random() * (i + 1));
+		[ arr[i], arr[j] ] = [ arr[j], arr[i] ];
 	}
 	return arr;
 }
