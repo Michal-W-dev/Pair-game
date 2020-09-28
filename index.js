@@ -261,10 +261,11 @@ function easyHard() {
 	}
 }
 
-// Shuffle - swapping items - index [i] with random [j]. Looping [i] from end of arr (to index 1).
+// Shuffle - swapping items - index [i] with random [j]. Looping bakcwards.
 function shuffle(arr) {
 	for (let i = arr.length - 1; i > 0; i--) {
 		let j = Math.floor(Math.random() * (i + 1));
+		// Use of array destructuring 
 		[ arr[i], arr[j] ] = [ arr[j], arr[i] ];
 	}
 	return arr;
