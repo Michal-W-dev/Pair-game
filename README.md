@@ -4,4 +4,4 @@
 <p>Go to options to change your name, see the tips, and assess the last results. </p>
 <p>Preferable use of browser is Mozilla and Chrome (the game was tested on them). </p>
 <br>
-https://michal-w-dev.github.io/pair-game/
+https://michal-w-dev.github.io/Pair-game/
